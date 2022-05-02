@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Component*/
+@layer components {
+  .btn {
+    @apply p-4 text-white rounded-full;
+  }
+
+  .btn-decoration {
+    @apply absolute right-0 top-1/2 h-0.5 w-8 bg-white after:absolute after:h-2 after:w-2 after:rounded-full after:bg-white after:left-0 after:-top-[3px];
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-b from-primary to-secondary;
+  }
+
+  .banner-title {
+    @apply text-4xl font-bold tracking-wider text-shadow-lg;
+  }
+
+  .main-title {
+    @apply font-bold text-2xl;
+  }
+
+  .sub-title {
+    @apply text-[#9a9a9a] uppercase;
+  }
+}
+
+/* Custom Swiper style */
+.swiper {
+  @apply mx-auto w-[90%] h-[100%] overflow-visible z-10 !important;
+  clip-path: inset(-100vw -20px -100vw -20px) !important;
+}
+
+.swiper-button-prev {
+  @apply -ml-4;
+}
+
+.swiper-button-next {
+  @apply -mr-4;
+}
+
+.swiper-button-prev::after {
+  @apply rounded-full bg-white bg-opacity-60 p-4 text-[20px] text-secondary shadow-lg content-['◀'] !important;
+}
+
+.swiper-button-next::after {
+  @apply rounded-full bg-gradient-to-b from-primary to-secondary p-4 text-[20px] text-white shadow-lg content-['▶'] !important;
+}
+
+.swiper-button-disabled {
+  @apply pointer-events-auto opacity-100 !important;
+}
+
+/* Custom Scroll Animation */
+.before-fade-down {
+  @apply opacity-0 -translate-y-28 duration-700 ease-in-out;
+}
+
+.fade-down {
+  @apply opacity-100 translate-y-0;
+}
+
+.before-fade-right {
+  @apply opacity-0 -translate-x-96 duration-700 ease-in-out;
+}
+
+.fade-right {
+  @apply opacity-100 translate-x-0;
+}
+
+.before-zoom-in {
+  @apply opacity-0 scale-50 duration-700 ease-in-out;
+}
+
+.zoom-in {
+  @apply opacity-100 scale-100;
+}
