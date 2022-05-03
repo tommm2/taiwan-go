@@ -2,8 +2,8 @@ import jsSHA from "jssha";
 
 export function getAuthorizationHeader() {
   //  填入TDX ID、KEY
-  let AppID = "37ee7f0864de4f919e901787379f20d5";
-  let AppKey = "2cHPotJCjlcNsKWNqvyozqEBD1Y";
+  let AppID = "xxxxxxxxxxxxxxxxxxxxxxxxxx";
+  let AppKey = "xxxxxxxxxxxxxxxxxxxxxxxxxx";
 
   let GMTString = new Date().toGMTString();
   let ShaObj = new jsSHA("SHA-1", "TEXT");
